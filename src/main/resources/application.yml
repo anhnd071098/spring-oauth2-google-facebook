@@ -1,0 +1,33 @@
+debug: false
+server:
+  port: 8081
+  servlet:
+    context-path: /
+     
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3308/sales
+    username: root
+    password: 12345678
+  jpa:
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+  security:
+    oauth2:
+      client:
+        registration:
+         google:
+          clientId: 1034759120370-jd83e24u1qb3itvnqudtv0rjostfm33u.apps.googleusercontent.com
+          clientSecret: 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
+          scope:
+           - email
+           - profile
+         facebook:
+          clientId: 6434369056658264
+          clientSecret: d9531fc4f6cd15a9860bbf27e6cf510b
+          scope:
+           - email
+           - public_profile
